@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Nomad Clock</title>
+    <link rel="stylesheet" href="dnc.css">
+</head>
+<body>
+    <div id="clock_local">
+        <div id="hours"></div>
+        <span>:</span>
+        <div id="minutes"></div>
+        <span>:</span>
+        <div id="seconds"></div>
+    </div>
+    <div id="clock_away">
+        <div id="hours_away"></div>
+        <span>:</span>
+        <div id="minutes_away"></div>
+        <span>:</span>
+        <div id="seconds_away"></div>
+        
+        <label for="selected_time_zone">Choose a Time-Zone:</label>
+            <select name="selected_time_zone" id="selected_time_zone">
+              <option value="America/Los_Angeles">Cali</option>
+              <option value="America/New_York">America</option>
+            </select>
+            <br><br>
+            <!-- <input id="button" type="button" value="button"> -->
+       
+    </div>
+       
+        
+
+    <script> selected_time_zone.addEventListener("change", function(e) {
+            e.preventDefault();
+           
+            console.log(e.target.value)
+        callAwayClock(e.target.value)
+    
+    // awayclock
+//    (setInterval(function localTime() {
+//         let todaysDate = new Date();
+//         const hours = document.getElementById('hours_away');
+//         const minutes = document.getElementById('minutes_away');
+//         const seconds = document.getElementById('seconds_away');
+//         new Date().toLocaleString("en-US", {timeZone: e.target.value})
+        
+//         document.getElementById("hours_away").innerHTML = todaysDate.getHours()
+//         document.getElementById("minutes_away").innerHTML = todaysDate.getMinutes()
+//         document.getElementById("seconds_away").innerHTML = todaysDate.getSeconds()
+//      }), 1000);
+    }) 
+</script>
+          
+
+    // <!-- <div id="clock_away">
+    //     <span class="time-away">1:45</span>
+    //     <span class="am-pm-away">PM</span>
+    // </div> -->
+    
+
+    <script src="dnc.js"></script>
+</body>
+</html>

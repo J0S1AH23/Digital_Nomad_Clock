@@ -1,0 +1,21 @@
+#clock_local {
+ width: 400px; 
+ /* height: 200px; */
+ border-radius: 200px;
+ background-color: black;
+ margin:center;
+ padding: 5vh;
+ color: white;
+ text-align: center;
+}
+
+#clock_away {
+    width: 400px; 
+    /* height: 200px;  */
+    border-radius: 200px;
+    background-color: yellow;
+    margin:center;
+    padding: 5vh;
+    color: black;
+    text-align: center;
+}
